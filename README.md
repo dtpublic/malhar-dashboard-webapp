@@ -3,6 +3,8 @@ malhar-dashboard-app
 
 Dashboard Web Application
 
+![AngularJS Dashboard](docs/AngularJSDashboard.png "AngularJS Dashboard")
+
 ## Running Application (minimum dependencies)
 
 1. Node.js way

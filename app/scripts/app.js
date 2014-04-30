@@ -1,7 +1,5 @@
 'use strict';
 
-angular.module('ui.dashboard.widgets', ['ngGrid']);
-
 angular.module('app', [
     'app.service',
     'app.websocket',

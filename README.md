@@ -1,6 +1,8 @@
 malhar-dashboard-app
 =================
 
+[![Build Status](https://travis-ci.org/DataTorrent/malhar-dashboard-webapp.svg)](https://travis-ci.org/DataTorrent/malhar-dashboard-webapp)
+
 Dashboard Web Application
 
 ![AngularJS Dashboard](docs/AngularJSDashboard.png "AngularJS Dashboard")

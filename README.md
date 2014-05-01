@@ -5,6 +5,8 @@ malhar-dashboard-app
 
 Dashboard Web Application
 
+[Online Demo](http://datatorrent.github.io/malhar-dashboard-webapp/#/)
+
 ![AngularJS Dashboard](docs/AngularJSDashboard.png "AngularJS Dashboard")
 
 ## Running Application (minimum dependencies)

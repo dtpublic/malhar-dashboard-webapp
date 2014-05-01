@@ -99,7 +99,7 @@ module.exports = function (grunt) {
         }]
       },
       server: '.tmp',
-      bower: 'dist/bower_components'
+      distBower: 'dist/bower_components'
     },
     jshint: {
       options: {
@@ -398,7 +398,7 @@ module.exports = function (grunt) {
     'uglify',
     'rev',
     'usemin',
-    'clean:bower'
+    'clean:distBower'
   ]);
 
   grunt.registerTask('default', [

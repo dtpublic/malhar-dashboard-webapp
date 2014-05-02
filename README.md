@@ -1,4 +1,4 @@
-malhar-dashboard-app
+malhar-dashboard-webapp
 =================
 
 [![Build Status](https://travis-ci.org/DataTorrent/malhar-dashboard-webapp.svg)](https://travis-ci.org/DataTorrent/malhar-dashboard-webapp)

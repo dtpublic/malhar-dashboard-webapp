@@ -2,14 +2,14 @@
 
 angular.module('app', [
     'app.service',
-    'app.websocket',
     'ngRoute',
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ui.dashboard',
     'nvd3ChartDirectives',
-    'ui.widgets'
+    'ui.dashboard',
+    'ui.widgets',
+    'ui.models'
   ])
   .constant('settings', window.settings)
   .config(function ($routeProvider, webSocketProvider, settings) {

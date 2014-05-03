@@ -1,82 +1,8 @@
 'use strict';
 
-angular.module('app.service', ['app.websocket']);
+angular.module('app.service', []);
 
 angular.module('app.service')
-  .factory('PieChartDataModel', function (WebSocketDataModel) {
-    function PieChartDataModel() {
-    }
-
-    PieChartDataModel.prototype = Object.create(WebSocketDataModel.prototype);
-
-    PieChartDataModel.prototype.init = function () {
-      WebSocketDataModel.prototype.init.call(this);
-      this.data = [];
-    };
-
-    PieChartDataModel.prototype.update = function (newTopic) {
-      WebSocketDataModel.prototype.update.call(this, newTopic);
-    };
-
-    PieChartDataModel.prototype.updateScope = function (value) {
-      var sum = _.reduce(value, function (memo, item) {
-        return memo + parseFloat(item.value);
-      }, 0);
-
-      var sectors = _.map(value, function (item) {
-        return {
-          key: item.label,
-          y: item.value / sum
-        };
-      });
-
-      sectors = _.sortBy(sectors, function (item) {
-        return item.key;
-      });
-
-      WebSocketDataModel.prototype.updateScope.call(this, sectors);
-    };
-
-    return PieChartDataModel;
-  })
-  .factory('TimeSeriesDataModel', function (WebSocketDataModel) {
-    function TimeSeriesDataModel() {
-    }
-
-    TimeSeriesDataModel.prototype = Object.create(WebSocketDataModel.prototype);
-
-    TimeSeriesDataModel.prototype.init = function () {
-      WebSocketDataModel.prototype.init.call(this);
-    };
-
-    TimeSeriesDataModel.prototype.update = function (newTopic) {
-      WebSocketDataModel.prototype.update.call(this, newTopic);
-      this.items = [];
-    };
-
-    TimeSeriesDataModel.prototype.updateScope = function (value) {
-      value = _.isArray(value) ? value[0] : value;
-
-      this.items.push({
-        timestamp: parseInt(value.timestamp, 10), //TODO
-        value: parseInt(value.value, 10) //TODO
-      });
-
-      if (this.items.length > 100) { //TODO
-        this.items.shift();
-      }
-
-      var chart = {
-        data: this.items,
-        max: 30
-      };
-
-      WebSocketDataModel.prototype.updateScope.call(this, chart);
-      this.data = [];
-    };
-
-    return TimeSeriesDataModel;
-  })
   .factory('RestTimeSeriesDataModel', function (settings, WidgetDataModel, $http) {
     function RestTimeSeriesDataModel() {
     }

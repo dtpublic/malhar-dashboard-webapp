@@ -9,6 +9,14 @@ Dashboard Web Application
 
 ![AngularJS Dashboard](docs/AngularJSDashboard.png "AngularJS Dashboard")
 
+## Dependencies
+
+[Dashboard Directive](https://github.com/DataTorrent/malhar-angular-dashboard)
+
+[Widget Library](https://github.com/DataTorrent/malhar-angular-widgets)
+
+![Dependencies](docs/dependencies.png "Dependencies")
+
 ## Running Application (minimum dependencies)
 
 1. Node.js way

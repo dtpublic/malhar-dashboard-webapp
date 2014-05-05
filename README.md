@@ -15,7 +15,7 @@ Dashboard Web Application
 
 [Widget Library](https://github.com/DataTorrent/malhar-angular-widgets)
 
-![Dependencies](docs/dependencies.png "Dependencies")
+![Dependencies](docs/ProjectDependencies.png "Dependencies")
 
 ## Running Application (minimum dependencies)
 

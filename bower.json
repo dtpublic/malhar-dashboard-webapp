@@ -32,6 +32,7 @@
   "resolutions": {
     "angular-ui-sortable": "0.12.5",
     "angular": "1.2.16",
-    "d3": "3.4.4"
+    "d3": "3.4.4",
+    "jquery": "~2.0.3"
   }
 }

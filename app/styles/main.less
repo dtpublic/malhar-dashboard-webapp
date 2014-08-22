@@ -1,8 +1,7 @@
 // path to fonts
 @icon-font-path: "../fonts/";
 @import "bootstrap";
-@import "../bower_components/pines-notify/jquery.pnotify.default.css";
-@import "../bower_components/pines-notify/jquery.pnotify.default.icons.css";
+@import "../bower_components/pines-notify/pnotify.core.css";
 @import "../bower_components/nvd3/nv.d3.css";
 @import "../bower_components/ng-grid/ng-grid.css";
 @import "nv.d3";
@@ -45,5 +44,15 @@ body {
 
   .alert {
     display: inline-block;
+  }
+}
+
+fieldset.overview-group {
+  border: 1px solid black;
+  padding: 10px;
+
+  legend {
+    width: auto;
+    border: 0;
   }
 }

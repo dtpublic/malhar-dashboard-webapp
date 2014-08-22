@@ -73,7 +73,4 @@ angular.module('app', [
       .otherwise({
         redirectTo: '/'
       });
-
-    // Use Bootstrap 3 theme in PNotify jQuery plugin
-    jQuery.pnotify.defaults.styling = 'bootstrap3';
   });

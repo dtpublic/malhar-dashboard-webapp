@@ -72,19 +72,6 @@ angular.module('app')
         templateUrl: 'template/percentage.html'
       },
       {
-        name: 'nvd3-stacked-area-chart',
-        attrs: {
-          data: 'stackedAreaChartData',
-          height: '400',
-          showXAxis: 'true',
-          showYAxis: 'true',
-          xAxisTickFormat: 'xAxisTickFormat()'
-        },
-        style: {
-          width: '50%'
-        }
-      },
-      {
         name: 'wt-pie-chart',
         style: {
           width: '350px',

@@ -164,7 +164,7 @@ angular.module('app.service')
 
     return MeteorTimeSeriesDataModel;
   })
-  .factory('WebSocketDataModel', function (WidgetDataModel, webSocket) {
+  .factory('WebSocketWidgetDataModel', function (WidgetDataModel, webSocket) {
     function WebSocketDataModel() {
     }
 
@@ -185,13 +185,13 @@ angular.module('app.service')
         webSocket.unsubscribe(this.topic, this.callback);
       }
 
-      this.callback = function (message) {
+      var callback = function (message) {
         that.updateScope(message);
         that.widgetScope.$apply();
       };
 
       this.topic = newTopic;
-      webSocket.subscribe(this.topic, this.callback, this.widgetScope);
+      this.callback = webSocket.subscribe(this.topic, callback, this.widgetScope);
     };
 
     WebSocketDataModel.prototype.destroy = function () {

@@ -8,7 +8,9 @@ angular.module('app')
       useLocalStorage: false, //TODO enable by default
       widgetButtons: true,
       widgetDefinitions: widgetDefs,
-      optionsTemplateUrl: 'template/widgetOptions.html'
+      settingsModalOptions: {
+        optionsTemplateUrl: 'template/widgetOptions.html'
+      }
     };
 
     Gateway.getTopics().then(function (topics) {

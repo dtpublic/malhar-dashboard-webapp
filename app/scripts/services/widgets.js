@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app.service')
-  .factory('widgetDefs', function (settings, WebSocketDataModel, TimeSeriesDataModel, PieChartDataModel) {
+  .factory('widgetDefs', function (settings, WebSocketWidgetDataModel, TimeSeriesDataModel, PieChartDataModel) {
     return [
       {
         name: 'Value',
@@ -11,7 +11,7 @@ angular.module('app.service')
           'value-class': 'alert-info'
         },
         dataTypes: ['percentage', 'simple'],
-        dataModelType: WebSocketDataModel,
+        dataModelType: WebSocketWidgetDataModel,
         dataModelOptions: {
           defaultTopic: settings.topic.visualdata.piValue
         }
@@ -25,7 +25,7 @@ angular.module('app.service')
         },
         dataAttrName: 'value',
         dataTypes: ['percentage', 'simple'],
-        dataModelType: WebSocketDataModel,
+        dataModelType: WebSocketWidgetDataModel,
         dataModelOptions: {
           defaultTopic: settings.topic.visualdata.progress
         }
@@ -51,7 +51,7 @@ angular.module('app.service')
         },
         dataAttrName: 'data',
         dataTypes: ['topN'],
-        dataModelType: WebSocketDataModel,
+        dataModelType: WebSocketWidgetDataModel,
         dataModelOptions: {
           defaultTopic: settings.topic.visualdata.topn
         }
@@ -75,7 +75,7 @@ angular.module('app.service')
         directive: 'wt-gauge',
         dataAttrName: 'value',
         dataTypes: ['percentage', 'simple'],
-        dataModelType: WebSocketDataModel,
+        dataModelType: WebSocketWidgetDataModel,
         dataModelOptions: {
           defaultTopic: settings.topic.visualdata.percentage
         },
@@ -87,7 +87,7 @@ angular.module('app.service')
         name: 'JSON',
         directive: 'wt-json',
         dataAttrName: 'value',
-        dataModelType: WebSocketDataModel,
+        dataModelType: WebSocketWidgetDataModel,
         dataModelOptions: {
           defaultTopic: settings.topic.visualdata.topn
         }

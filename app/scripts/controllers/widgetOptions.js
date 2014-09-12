@@ -37,7 +37,6 @@ angular.module('app')
 
       $scope.$watch('topic', function (newTopic) {
         if (newTopic && (newTopic.topic !== widget.dataModel.topic)) {
-          console.log(widget.dataModel);
           widget.dataModel.update(newTopic.topic);
         }
       });

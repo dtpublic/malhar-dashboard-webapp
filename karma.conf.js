@@ -22,6 +22,7 @@ module.exports = function(config) {
       'app/bower_components/angular-ui-sortable/sortable.js',
       'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'app/bower_components/malhar-angular-dashboard/dist/angular-ui-dashboard.js',
+      'app/bower_components/malhar-angular-table/dist/mlhr-table.js',
       'app/bower_components/malhar-angular-widgets/dist/malhar-angular-widgets.js',
       'app/bower_components/ng-grid/ng-grid-2.0.11.debug.js',
       'app/bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js',

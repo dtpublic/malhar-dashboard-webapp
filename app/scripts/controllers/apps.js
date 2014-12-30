@@ -37,10 +37,10 @@ angular.module('app')
     var linkTemplate = '<a href="#/apps/{{row.id}}">{{row.id}}</a>';
 
     $scope.tableColumns = [
-      { key: 'id',          label: 'Id', template: linkTemplate, width: 250 },
-      { key: 'name',        label: 'Name' },
-      { key: 'startedTime', label: 'Start Time', template: '<span>{{ row.startedTime | date:\'yyyy-MM-dd HH:mm:ss\' }}</span>', width: 200 },
-      { key: 'topicCount',  label: 'Topic Count', width: 150 }
+      { id: 'id', key: 'id',          label: 'Id', template: linkTemplate, width: 250 },
+      { id: 'name', key: 'name',        label: 'Name' },
+      { id: 'startedTime', key: 'startedTime', label: 'Start Time', template: '<span>{{ row.startedTime | date:\'yyyy-MM-dd HH:mm:ss\' }}</span>', width: 200 },
+      { id: 'topicCount', key: 'topicCount',  label: 'Topic Count', width: 150 }
     ];
 
     $scope.tableOptions = {};

@@ -34,18 +34,14 @@ angular.module('app')
       $scope.showLoading = false;
     });
 
-    var linkTemplate = '<div class="ngCellText" ng-class="col.colIndex()"><span ng-cell-text><a href="#/apps/{{COL_FIELD}}">{{COL_FIELD}}</a></span></div>';
+    var linkTemplate = '<a href="#/apps/{{row.id}}">{{row.id}}</a>';
 
-    $scope.gridOptions = {
-      data: 'apps',
-      enableRowSelection: false,
-      enableColumnResize: true,
-      showFilter: true,
-      columnDefs: [
-        { field: 'id', displayName: 'Id', cellTemplate: linkTemplate, width: 250 },
-        { field: 'name', displayName: 'Name' },
-        { field: 'startedTime', displayName: 'Start Time', cellFilter: 'date:\'yyyy-MM-dd HH:mm:ss\'', width: 200 },
-        { field: 'topicCount', displayName: 'Topic Count', width: 150 }
-      ]
-    };
+    $scope.tableColumns = [
+      { id: 'id', key: 'id',          label: 'Id', template: linkTemplate, width: 250 },
+      { id: 'name', key: 'name',        label: 'Name' },
+      { id: 'startedTime', key: 'startedTime', label: 'Start Time', template: '<span>{{ row.startedTime | date:\'yyyy-MM-dd HH:mm:ss\' }}</span>', width: 200 },
+      { id: 'topicCount', key: 'topicCount',  label: 'Topic Count', width: 150 }
+    ];
+
+    $scope.tableOptions = {};
   });

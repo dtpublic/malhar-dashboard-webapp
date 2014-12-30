@@ -2,5 +2,9 @@
     <h2>Select Application to Load</h2>
     <div class="alert alert-warning" ng-show="showLoading">Loading Applications...</div>
 
-    <div ng-grid="gridOptions"></div>
+    <mlhr-table
+    options="tableOptions"
+    rows="apps"
+    columns="tableColumns"
+    table-class="table"></mlhr-table>
 </div>

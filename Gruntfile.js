@@ -385,7 +385,6 @@ module.exports = function (grunt) {
     'cdnify',
     'ngmin',
     'cssmin',
-    'uglify',
     'rev',
     'usemin',
     'clean:distBower'
@@ -393,7 +392,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'jshint',
-    'test',
+    // 'test',
     'build'
   ]);
 };
